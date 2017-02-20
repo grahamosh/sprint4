@@ -8,6 +8,5 @@ pipeline:
     pull: true
     commands:
       - mvn clean
-      - mvn install -q DskipTests=true
+      - mvn install -q -DskipTests=true
       - mvn test
-
