@@ -1,0 +1,12 @@
+workspace:
+  base: /maven
+  path: /maven
+
+pipeline:
+  build:
+    image: maven:latest
+    pull: true
+    commands:
+      - mvn clean
+      - mvn install -q DskipTests=true
+      - mvn test
